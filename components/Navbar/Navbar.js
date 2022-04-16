@@ -38,7 +38,7 @@ const Navbar = () => {
 						<ul>
 							{SocialLinks.map(link => (
 								<li key={link.name}>
-									<a href={link.url}>
+									<a href={link.url} target="_blank" rel="noreferrer">
 										<img src={link.imgUrl} alt={link.name} />
 									</a>
 								</li>

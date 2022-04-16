@@ -8,7 +8,7 @@ const IndexTwitterGrid = () => {
             <ul>
                 {Leaders.users.map((leader, i) => (
                     <li key={leader}>
-                        <a href={`https://twitter.com/${leader}`} target="_blank">
+                        <a href={`https://twitter.com/${leader}`} target="_blank" rel="noreferrer">
                             {i + 1}_ @{leader}
                         </a>
                     </li>

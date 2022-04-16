@@ -24,7 +24,7 @@ const IllustratedList = [
     content: (
       <p>
         At conclusion of the campaign, visit{" "}
-        <a href="carrot.eth.limo" target="_blank">
+        <a href="carrot.eth.limo" target="_blank" rel="noreferrer">
           carrot.eth.limo
         </a>{" "}
         to redeem your Carrot tokens.

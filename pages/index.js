@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styled from 'styled-components';
 
 import IndexHero from './../components/_index/IndexHero'
 import IndexInfo from './../components/_index/IndexInfo'
 import Header from './../components/Header/Header'
+import IndexTopStrip from '../components/_index/IndexTopStrip';
 
 export default function Home() {
   return (
@@ -22,6 +22,7 @@ export default function Home() {
           <IndexHero />
         </Header>
         <main id="index">
+          <IndexTopStrip />
           <IndexInfo />
         </main>
         <span className="year">

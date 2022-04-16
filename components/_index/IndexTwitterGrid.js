@@ -46,6 +46,11 @@ const StyledTwitterGrid = styled(Box)`
                 width: 100%;
                 height: 100%;
                 align-items: inherit;
+                color: ${props => props.theme.colors.gray600};
+                transition: 0.15s ease-in-out all;
+                &:hover {
+                    color: ${props => props.theme.colors.black};
+                }
             }
             &:after,
             &:before {

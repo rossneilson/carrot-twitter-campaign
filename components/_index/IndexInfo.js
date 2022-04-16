@@ -118,7 +118,7 @@ const IndexInfo = () => {
           <div className="detail-block">
             <h2>Don’t have Carrot tokens and want to buy some?</h2>
             <p>
-            Check out the Carrot token -> wXDAI pool on Swapr.eth.limo: xDXDAOTWIT50-0425 -> wxDAI pool
+            Check out the Carrot token -&gt; wXDAI pool on Swapr.eth.limo: xDXDAOTWIT50-0425 -&gt; wxDAI pool
             </p>
           </div>
         </Box>

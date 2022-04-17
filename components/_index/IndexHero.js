@@ -27,9 +27,6 @@ const StyledIndexHero = styled.section`
     font-height: 80px;
     font-weight: 100;
     margin-bottom: 32px;
-    span {
-      
-    }
   }
   p {
     color: ${props => props.theme.colors.orange};
@@ -51,6 +48,7 @@ const StyledIndexHero = styled.section`
       font-size: 40px;
       line-height: 44px;
       margin-top: 40px;
+      margin-bottom: 16px;
     }
     p {
       font-size: 12px;

@@ -51,10 +51,24 @@ const StyledBox = styled.div`
   &.medium {
     width: 712px;
   }
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.l}) {
+    &.large,
+    &.medium {
+      max-width: calc(100% - (84px * 2)) !important;
+      width: 100% !important;
+    }
+  }
   @media screen and (max-width: ${(props) => props.theme.breakpoints.m}) {
     &.large,
     &.medium {
-      max-width: calc(100vw - 40px) !important;
+      max-width: calc(100% - (48px * 2)) !important;
+      width: 100% !important;
+    }
+  }
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    &.large,
+    &.medium {
+      max-width: calc(100% - 48px) !important;
       width: 100% !important;
     }
   }

@@ -11,15 +11,16 @@ const theme = {
         gray200: "hsla(20, 6%, 80%, 1)",
         gray100: "hsla(20, 6%, 90%, 1)",
         orange: "hsla(21, 100%, 59%, 1)",
+        orange_op6: "hsla(21, 100%, 59%, 0.6)",
         lavender: "hsla(256, 100%, 86%, 1)",
         yellow: "hsla(48, 98%, 50%, 1)",
         green: "hsla(94, 71%, 44%, 1)"
     },
     breakpoints: {
-        xs: "320px",
-        s: "845px",
-        m: "1170px",
-        l: "1240px",
+        xs: "380px",
+        s: "480px",
+        m: "768px",
+        l: "1280px",
         xl: "1920px"
     },
     gradients: {

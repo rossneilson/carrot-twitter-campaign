@@ -52,7 +52,7 @@ const StyledIndexPage = styled.div`
       bottom: 4px;
     }
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+  @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
     padding-bottom: 80px;
   }
 `;

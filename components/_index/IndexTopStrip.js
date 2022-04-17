@@ -9,7 +9,7 @@ const IndexTopStrip = () => {
       <StyledIndexTopStrip size="large">
         <div className="warning-logo">
           <Image 
-            src="/CarrotWarningLogo.svg"
+            src="/CarrotWarningLogo.png"
             layout="responsive"
             width={'100vw'}
             height={'100vw'}
@@ -62,21 +62,25 @@ const StyledIndexTopStrip = styled(Box)`
       font-weight: 100;
     }
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+  @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
     flex-direction: column;
     padding: 32px 0 40px;
-    &&& {
-      max-width: 360px !important;
-    }
     .warning-logo {
         margin-bottom: 32px;
-        width: 184px;
-        height: 184px;
+        width: 154px;
+        height: 154px;
         margin-top: 24px;
     }
     p {
       font-size: 20px;
       line-height: 28px;
+      letter-spacing: 0px;
+    }
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}) {
+    &&& {
+      width: 100% !important;
+      max-width: unset !important;
     }
   }
 `;

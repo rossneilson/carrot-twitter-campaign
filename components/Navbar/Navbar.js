@@ -84,7 +84,7 @@ const StyledNavbar = styled(Box)`
 				display: flex;
 				li {
 					margin: 0 7px;
-					opacity: 0.6;
+					opacity: 0.8;
 					transition: 0.25s ease-in-out all;
 					&:first-child {
 						margin-left: 0;
@@ -104,10 +104,9 @@ const StyledNavbar = styled(Box)`
 			}
 		}
 	}
-	@media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+	@media screen and (max-width: ${props => props.theme.breakpoints.l}) {
 		height: 68px;
 		.navbar-inner-container {
-			max-width: 360px !important;
 			.logo {
 				width: 140px;
 			}

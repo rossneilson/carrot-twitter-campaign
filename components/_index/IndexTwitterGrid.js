@@ -80,7 +80,7 @@ const StyledTwitterGrid = styled(Box)`
             }
         }
     }
-    @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
         margin-bottom: 80px !important;
         ul {
             height: unset !important;
@@ -88,8 +88,9 @@ const StyledTwitterGrid = styled(Box)`
             li {
                 border-bottom: 0 !important;
                 width: 100%;
-                padding-left: 16px;
+                padding-left: 64px;
                 height: 40px;
+                border-color: ${props => props.theme.colors.orange_op6} !important;
                 a {
                     color: ${props => props.theme.colors.black};
                     font-size: 13px;
@@ -98,7 +99,7 @@ const StyledTwitterGrid = styled(Box)`
                     border-top: 0;
                 }
                 &:last-child {
-                    border-bottom: 1px solid ${props => props.theme.colors.orange} !important;
+                    border-bottom: 1px solid ${props => props.theme.colors.orange_op6} !important;
                 }
                 &:after,
                 &:before {

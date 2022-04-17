@@ -131,7 +131,7 @@ const IndexInfo = () => {
           <div className="detail-block">
             <h2>Don’t have Carrot tokens and want to buy some?</h2>
             <p>
-            Check out the Carrot token -&gt; wXDAI pool on Swapr.eth.limo: xDXDAOTWIT50-0425 -&gt; wxDAI pool
+            Check out the Carrot token -&gt; wXDAI pool on Swapr.eth.limo: <br/>xDXDAOTWIT50-0425 -&gt; wxDAI pool
             </p>
           </div>
         </Box>
@@ -154,10 +154,12 @@ const arrowAnimationMovement = keyframes`
 
 const StyledIndexInfo = styled(Box)`
   .primary-list {
+    margin: 0 auto;
+    width: 680px;
     ul {
       margin-bottom: 100px;
       li {
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 100;
         color: ${(props) => props.theme.colors.gray600};
         margin-bottom: 40px;
@@ -275,6 +277,7 @@ const StyledIndexInfo = styled(Box)`
   }
   .campaign-details,
   .lower-details {
+    max-width: 672px;
     margin-bottom: 112px;
     .detail-block {
       text-align: center;
@@ -287,7 +290,7 @@ const StyledIndexInfo = styled(Box)`
         color: ${(props) => props.theme.colors.orange};
         font-weight: 200;
         line-height: 55.5px;
-        letter-spacing: 7px;
+        letter-spacing: 6px;
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 12px;
@@ -300,15 +303,17 @@ const StyledIndexInfo = styled(Box)`
       }
     }
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+  @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
     .primary-list {
+      padding-left: 60px;
+      width: unset;
       ul {
-        width: calc(255px);
         margin-left: auto;
         margin-right: auto;
         li {
           font-size: 20px;
           line-height: 28px;
+          letter-spacing: 0px;
         }
       }
     }
@@ -321,7 +326,6 @@ const StyledIndexInfo = styled(Box)`
     }
     .campaign-details,
     .lower-details {
-      max-width: 360px !important;
       margin-left: auto;
       margin-right: auto;
       .detail-block {
@@ -336,7 +340,6 @@ const StyledIndexInfo = styled(Box)`
       }
     }
     .illustrated-list {
-      max-width: 360px;
       margin: 0 auto 60px;
       h2 {
         font-size: 32px;
@@ -349,12 +352,15 @@ const StyledIndexInfo = styled(Box)`
           flex-direction: column !important;
           height: unset;
           padding-bottom: 48px;
-          padding-top: 60px;
+          padding-top: 0px;
+          margin-top: -10px;
           &:first-child {
             padding-top: 20px;
           }
           .graphic {
             margin-left: auto;
+            transform: scale(0.75);
+            transform-origin: bottom right;
           }
           .content {
             margin-top: -40px;

@@ -9,7 +9,7 @@ const IndexHero = () => {
         <Motion initialPositionY={100}>
           <h1>DXdao Twitter<br/> Awareness Activation<br/> Using <bold>Carrot.eth</bold> </h1>
           <p>
-            During ETH Week in Amsterdam
+            During ETH Week<br className="show-mobile"/> in Amsterdam
           </p>
           <p>
             April 18-25, 2022
@@ -39,13 +39,14 @@ const StyledIndexHero = styled.section`
     text-transform: uppercase;
     font-weight: 200;
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
-    padding-bottom: 80px;
-    &&& {
-      max-width: 360px !important;
-      margin-left: auto;
-      margin-right: auto;
+  .show-mobile {
+    display: none;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
+    .show-mobile {
+      display: block;
     }
+    padding-bottom: 80px;
     h1 {
       font-size: 40px;
       line-height: 44px;

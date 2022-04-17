@@ -277,7 +277,7 @@ const StyledIndexInfo = styled(Box)`
   }
   .campaign-details,
   .lower-details {
-    max-width: 672px;
+    max-width: 970px;
     margin-bottom: 112px;
     .detail-block {
       text-align: center;
@@ -328,6 +328,7 @@ const StyledIndexInfo = styled(Box)`
     .lower-details {
       margin-left: auto;
       margin-right: auto;
+      max-width: 672px;
       .detail-block {
         h2 {
           font-size: 20px;
@@ -341,11 +342,12 @@ const StyledIndexInfo = styled(Box)`
     }
     .illustrated-list {
       margin: 0 auto 60px;
+      max-width: 480px;
+      padding: 0 48px;
       h2 {
         font-size: 32px;
         line-height: 38.4px;
-        margin-bottom: 40px;
-        padding: 0 15%;
+        margin-bottom: 0px;
       }
       ul {
         li {
@@ -377,6 +379,12 @@ const StyledIndexInfo = styled(Box)`
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.s}) {
+    .illustrated-list {
+      padding: 0;
+      max-width: unset;
     }
   }
 `;

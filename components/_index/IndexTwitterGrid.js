@@ -84,11 +84,11 @@ const StyledTwitterGrid = styled(Box)`
         margin-bottom: 80px !important;
         ul {
             height: unset !important;
-            max-width: calc(360px) !important;
+            max-width: 572px !important;
             li {
                 border-bottom: 0 !important;
                 width: 100%;
-                padding-left: 64px;
+                padding-left: 80px;
                 height: 40px;
                 border-color: ${props => props.theme.colors.orange_op6} !important;
                 a {
@@ -106,6 +106,11 @@ const StyledTwitterGrid = styled(Box)`
                     display: none;
                 }
             }
+        }
+    }
+    @media screen and (max-width: ${props => props.theme.breakpoints.s}) {
+        ul {
+            max-width: calc(100% - 48px) !important;
         }
     }
 `;

@@ -32,8 +32,8 @@ const Navbar = () => {
 						<Image 
 							layout="responsive"
 							src="/CarrotLogo.svg"
-							width={'100%'}
-							height={'100%'}
+							width={'100vw'}
+							height={'100vw'}
 						/>
 					</div>
 					<section className="navbar-links">
@@ -47,8 +47,8 @@ const Navbar = () => {
 											src={link.imgUrl} 
 											alt={link.name} 
 											layout={'responsive'}
-											width={'28px'}
-											height={'28px'}
+											width={'100vw'}
+											height={'100vw'}
 										/>
 									</a>
 								</li>

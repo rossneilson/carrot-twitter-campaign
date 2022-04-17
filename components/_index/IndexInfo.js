@@ -68,8 +68,8 @@ const IndexInfo = () => {
                 <Image
                   src="/DownArrowGreen.svg"
                   layout="responsive"
-                  width="100%"
-                  height="100%"
+                  width="100vw"
+                  height="100vw"
                 />
               </div>
             ))}
@@ -84,8 +84,8 @@ const IndexInfo = () => {
                   <div className="graphic">
                     <Image 
                       src={`/IllustrationList/${i + 1}.svg`} 
-                      width={'100%'}
-                      height={'100%'}
+                      width={'100vw'}
+                      height={'100vw'}
                       layout="responsive"
                     />
                   </div>

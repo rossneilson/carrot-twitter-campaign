@@ -11,8 +11,8 @@ const IndexTopStrip = () => {
           <Image 
             src="/CarrotWarningLogo.svg"
             layout="responsive"
-            width={'100%'}
-            height={'100%'}
+            width={'100vw'}
+            height={'100vw'}
           />
         </div>
         <p>

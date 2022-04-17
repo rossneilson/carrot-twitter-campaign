@@ -217,8 +217,8 @@ const StyledIndexInfo = styled(Box)`
         border-bottom: 1px solid ${(props) => props.theme.colors.orange};
         height: 311px;
         .graphic {
-          width: 240px;
-          height: 240px
+          min-width: 240px;
+          min-height: 240px
         }
         .content {
           padding: 0 0 0 40px;

@@ -52,7 +52,8 @@ const StyledBox = styled.div`
     width: 712px;
   }
   @media screen and (max-width: ${(props) => props.theme.breakpoints.m}) {
-    &.large {
+    &.large,
+    &.medium {
       max-width: calc(100vw - 40px) !important;
       width: 100% !important;
     }

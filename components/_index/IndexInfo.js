@@ -69,7 +69,7 @@ const IndexInfo = () => {
         </Motion>
         <Motion>
           <section className="illustrated-list">
-            <h2>What do you need to know</h2>
+            <h2>What do you need to know?</h2>
             <ul>
               {IllustratedList.map((listItem, i) => (
                 <li key={i}>
@@ -283,6 +283,74 @@ const StyledIndexInfo = styled(Box)`
         line-height: 48px;
         color: ${(props) => props.theme.colors.gray600};
         font-weight: 100;
+      }
+    }
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    .primary-list {
+      ul {
+        width: calc(255px);
+        margin-left: auto;
+        margin-right: auto;
+        li {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+    .arrow-strip {
+      margin-bottom: 40px;
+      img {
+        margin: 0 9px;
+        width: 18px;
+      }
+    }
+    .campaign-details,
+    .lower-details {
+      .detail-block {
+        h2 {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .illustrated-list {
+      h2 {
+        font-size: 32px;
+        line-height: 38.4px;
+        margin-bottom: 40px;
+        padding: 0 15%;
+      }
+      ul {
+        li {
+          flex-direction: column !important;
+          height: unset;
+          padding-bottom: 48px;
+          padding-top: 60px;
+          &:first-child {
+            padding-top: 20px;
+          }
+          .graphic {
+            margin-left: auto;
+          }
+          .content {
+            margin-top: -40px;
+            padding: 0 !important;
+            .list-item-number {
+              margin-right: auto;
+              margin-left: 0 !important;
+            }
+            p {
+              font-size: 18px;
+              line-height: 25.5px;
+              text-align: left;
+            }
+          }
+        }
       }
     }
   }

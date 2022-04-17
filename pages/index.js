@@ -43,4 +43,7 @@ const StyledIndexPage = styled.div`
     color: ${(props) => props.theme.colors.gray800};
     font-weight: 300;
   }
+  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    padding-bottom: 80px;
+  }
 `;

@@ -46,10 +46,12 @@ const StyledTwitterGrid = styled(Box)`
                 width: 100%;
                 height: 100%;
                 align-items: inherit;
-                color: ${props => props.theme.colors.gray600};
+                color: ${props => props.theme.colors.black};
                 transition: 0.15s ease-in-out all;
+                font-weight: 600;
+                letter-spacing: 2.5px;
                 &:hover {
-                    color: ${props => props.theme.colors.black};
+                    color: ${props => props.theme.colors.orange};
                 }
             }
             &:after,
@@ -75,6 +77,33 @@ const StyledTwitterGrid = styled(Box)`
             }
             &:nth-child(10n) {
                 border-bottom: 1px solid ${props => props.theme.colors.orange};
+            }
+        }
+    }
+    @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+        margin-bottom: 80px !important;
+        ul {
+            height: unset !important;
+            max-width: calc(100vw - 40px) !important;
+            li {
+                border-bottom: 0 !important;
+                width: 100%;
+                padding-left: 16px;
+                height: 40px;
+                a {
+                    color: ${props => props.theme.colors.black};
+                    font-size: 13px;
+                }
+                &:first-child {
+                    border-top: 0;
+                }
+                &:last-child {
+                    border-bottom: 1px solid ${props => props.theme.colors.orange} !important;
+                }
+                &:after,
+                &:before {
+                    display: none;
+                }
             }
         }
     }

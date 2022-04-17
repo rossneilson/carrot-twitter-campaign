@@ -25,7 +25,7 @@ const SocialLinks = [
 
 const Navbar = () => {
   return (
-		<Motion initialPositionY={-100}>
+		<Motion initialPositionY={-60}>
 			<StyledNavbar className="navbar" size="full" dataAos="fade-down">
 				<Box size="large" className="navbar-inner-container">
 					<img 
@@ -90,6 +90,17 @@ const StyledNavbar = styled(Box)`
 						transition: 0.25s ease-in-out all;
 					}
 				}
+			}
+		}
+	}
+	@media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+		height: 68px;
+		.navbar-inner-container {
+			.logo {
+				width: 140px;
+			}
+			.navbar-links {
+				display: none;
 			}
 		}
 	}

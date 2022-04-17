@@ -50,6 +50,19 @@ const StyledIndexTopStrip = styled(Box)`
       font-weight: 100;
     }
   }
+  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    flex-direction: column;
+    padding: 32px 0 40px;
+    img {
+      margin-bottom: 32px;
+      width: 184px;
+      margin-top: 24px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
 `;
 
 export default IndexTopStrip;

@@ -21,7 +21,7 @@ const IndexHero = () => {
 };
 
 const StyledIndexHero = styled.section`
-padding-bottom: 162px;
+  padding-bottom: 162px;
   h1 {
     font-size: 80px;
     font-height: 80px;
@@ -38,6 +38,18 @@ padding-bottom: 162px;
     letter-spacing: 7px;
     text-transform: uppercase;
     font-weight: 200;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
+    padding-bottom: 80px;
+    h1 {
+      font-size: 40px;
+      line-height: 44px;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 `;
 

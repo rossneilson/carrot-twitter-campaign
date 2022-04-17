@@ -9,17 +9,17 @@ const SocialLinks = [
 	{
 		name: 'Discord',
 		imgUrl: '/SocialLinks/Discord.svg',
-		url: '#'
+		url: 'https://discord.gg/4QXEJQkvHH'
 	},
 	{
 		name: 'Keybase',
 		imgUrl: '/SocialLinks/Keybase.svg',
-		url: '#'
+		url: 'https://keybase.io/team/dx_dao'
 	},
 	{
 		name: 'DAOTalk',
 		imgUrl: '/SocialLinks/DAOTalk.svg',
-		url: '#'
+		url: 'https://daotalk.org/c/dx-dao/15'
 	},
 ];
 

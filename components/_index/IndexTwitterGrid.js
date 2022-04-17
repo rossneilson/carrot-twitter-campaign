@@ -84,7 +84,7 @@ const StyledTwitterGrid = styled(Box)`
         margin-bottom: 80px !important;
         ul {
             height: unset !important;
-            max-width: calc(100vw - 40px) !important;
+            max-width: calc(360px) !important;
             li {
                 border-bottom: 0 !important;
                 width: 100%;

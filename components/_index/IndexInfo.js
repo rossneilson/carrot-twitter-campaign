@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import Image from "next/image";
 import Box from "../Box/Box";
 import IndexTwitterGrid from './IndexTwitterGrid'
 import Motion from "../Motion/Motion";
@@ -59,11 +60,18 @@ const IndexInfo = () => {
         <Motion>
           <div className="arrow-strip">
             {[...Array(5)].map((e, i) => (
-              <img
-              key={i}
+              <div 
+                key={i}
+                className="green-arrow"
                 style={{ animationDelay: (0 + i) * 100 + "ms" }}
-                src="/DownArrowGreen.svg"
-              />
+                >
+                <Image
+                  src="/DownArrowGreen.svg"
+                  layout="responsive"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             ))}
           </div>
         </Motion>
@@ -74,7 +82,12 @@ const IndexInfo = () => {
               {IllustratedList.map((listItem, i) => (
                 <li key={i}>
                   <div className="graphic">
-                    <img src={`/IllustrationList/${i + 1}.svg`} />
+                    <Image 
+                      src={`/IllustrationList/${i + 1}.svg`} 
+                      width={'100%'}
+                      height={'100%'}
+                      layout="responsive"
+                    />
                   </div>
                   <div className="content">
                     <div className="list-item-number">{i + 1}</div>
@@ -175,7 +188,9 @@ const StyledIndexInfo = styled(Box)`
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
-    img {
+    .green-arrow {
+      width: 32px;
+      height: 32px;
       margin: 0 12px;
       animation: ${arrowAnimationMovement} 2s infinite forwards;
       &:first-child {
@@ -202,9 +217,8 @@ const StyledIndexInfo = styled(Box)`
         border-bottom: 1px solid ${(props) => props.theme.colors.orange};
         height: 311px;
         .graphic {
-          img {
-            width: 240px;
-          }
+          width: 240px;
+          height: 240px
         }
         .content {
           padding: 0 0 0 40px;
@@ -300,13 +314,16 @@ const StyledIndexInfo = styled(Box)`
     }
     .arrow-strip {
       margin-bottom: 40px;
-      img {
+      .green-arrow {
         margin: 0 9px;
         width: 18px;
       }
     }
     .campaign-details,
     .lower-details {
+      max-width: 360px !important;
+      margin-left: auto;
+      margin-right: auto;
       .detail-block {
         h2 {
           font-size: 20px;
@@ -319,6 +336,8 @@ const StyledIndexInfo = styled(Box)`
       }
     }
     .illustrated-list {
+      max-width: 360px;
+      margin: 0 auto 60px;
       h2 {
         font-size: 32px;
         line-height: 38.4px;

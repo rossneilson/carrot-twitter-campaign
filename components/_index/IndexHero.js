@@ -28,7 +28,7 @@ const StyledIndexHero = styled.section`
     font-weight: 100;
     margin-bottom: 32px;
     span {
-
+      
     }
   }
   p {
@@ -41,6 +41,11 @@ const StyledIndexHero = styled.section`
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
     padding-bottom: 80px;
+    &&& {
+      max-width: 360px !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
     h1 {
       font-size: 40px;
       line-height: 44px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import Box from "../Box/Box";
 import Motion from "../Motion/Motion";
 
@@ -6,7 +7,14 @@ const IndexTopStrip = () => {
   return (
     <Motion>
       <StyledIndexTopStrip size="large">
-        <img src="/CarrotWarningLogo.svg"/>
+        <div className="warning-logo">
+          <Image 
+            src="/CarrotWarningLogo.svg"
+            layout="responsive"
+            width={'100%'}
+            height={'100%'}
+          />
+        </div>
         <p>
           If you have received this information, you are now a participant in the <strong>DXdao Twitter Awareness Activation campaign</strong> during ETH Week in Amsterdam.  
         </p>
@@ -36,6 +44,10 @@ const StyledIndexTopStrip = styled(Box)`
     bottom: -60px;
     transform: rotate(180deg);
   }
+  .warning-logo {
+    width: 220px;
+    height: 220px;
+  }
 
   p {
     font-size: 32px;
@@ -53,10 +65,14 @@ const StyledIndexTopStrip = styled(Box)`
   @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
     flex-direction: column;
     padding: 32px 0 40px;
-    img {
-      margin-bottom: 32px;
-      width: 184px;
-      margin-top: 24px;
+    &&& {
+      max-width: 360px !important;
+    }
+    .warning-logo {
+        margin-bottom: 32px;
+        width: 184px;
+        height: 184px;
+        margin-top: 24px;
     }
     p {
       font-size: 20px;

@@ -6,6 +6,8 @@ import IndexInfo from './../components/_index/IndexInfo'
 import Header from './../components/Header/Header'
 import IndexTopStrip from '../components/_index/IndexTopStrip';
 
+import Motion from '../components/Motion/Motion';
+
 export default function Home() {
   return (
     <>
@@ -25,9 +27,11 @@ export default function Home() {
           <IndexTopStrip />
           <IndexInfo />
         </main>
-        <span className="year">
-          • 2022 •
-        </span>
+        <Motion>
+          <span className="year">
+            <span>•</span> 2022 <span>•</span>
+          </span>
+        </Motion>
       </StyledIndexPage>
     </>
   )
@@ -42,6 +46,11 @@ const StyledIndexPage = styled.div`
     font-size: 16px;
     color: ${(props) => props.theme.colors.gray800};
     font-weight: 300;
+    span {
+      font-size: 4px;
+      position: relative;
+      bottom: 4px;
+    }
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
     padding-bottom: 80px;

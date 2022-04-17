@@ -28,10 +28,14 @@ const Navbar = () => {
 		<Motion initialPositionY={-60}>
 			<StyledNavbar className="navbar" size="full" dataAos="fade-down">
 				<Box size="large" className="navbar-inner-container">
-					<img 
-						className="logo" 
-						src="/CarrotLogo.svg"
-					/>
+					<div className="logo">
+						<Image 
+							layout="responsive"
+							src="/CarrotLogo.svg"
+							width={'100%'}
+							height={'100%'}
+						/>
+					</div>
 					<section className="navbar-links">
 						<span>Join the DXdao Community</span>
 						<span className="separator"></span>
@@ -39,7 +43,13 @@ const Navbar = () => {
 							{SocialLinks.map(link => (
 								<li key={link.name}>
 									<a href={link.url} target="_blank" rel="noreferrer">
-										<img src={link.imgUrl} alt={link.name} />
+										<Image 
+											src={link.imgUrl} 
+											alt={link.name} 
+											layout={'responsive'}
+											width={'28px'}
+											height={'28px'}
+										/>
 									</a>
 								</li>
 							))}
@@ -74,6 +84,8 @@ const StyledNavbar = styled(Box)`
 				display: flex;
 				li {
 					margin: 0 7px;
+					opacity: 0.6;
+					transition: 0.25s ease-in-out all;
 					&:first-child {
 						margin-left: 0;
 					}
@@ -81,13 +93,12 @@ const StyledNavbar = styled(Box)`
 						margin-right: 0;
 					}
 					&:hover {
-						img {
-							opacity: 1;
-						}
+						opacity: 1;
 					}
-					img {
-						opacity: 0.6;
-						transition: 0.25s ease-in-out all;
+					a {
+						width: 28px;
+						height: 28px;
+						display: inline-block;
 					}
 				}
 			}
@@ -96,6 +107,7 @@ const StyledNavbar = styled(Box)`
 	@media screen and (max-width: ${props => props.theme.breakpoints.m}) {
 		height: 68px;
 		.navbar-inner-container {
+			max-width: 360px !important;
 			.logo {
 				width: 140px;
 			}

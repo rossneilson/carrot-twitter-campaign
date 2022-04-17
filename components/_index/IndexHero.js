@@ -37,7 +37,7 @@ const StyledIndexHero = styled.section`
     font-size: 21px;
     letter-spacing: 7px;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 400;
   }
   .show-mobile {
     display: none;
@@ -53,8 +53,9 @@ const StyledIndexHero = styled.section`
       margin-top: 40px;
     }
     p {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 6px;
     }
   }
 `;

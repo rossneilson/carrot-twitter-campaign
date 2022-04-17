@@ -159,7 +159,7 @@ const StyledIndexInfo = styled(Box)`
     ul {
       margin-bottom: 100px;
       li {
-        font-size: 20px;
+        font-size: 32px;
         font-weight: 100;
         color: ${(props) => props.theme.colors.gray600};
         margin-bottom: 40px;

@@ -11,8 +11,8 @@ const IndexTopStrip = () => {
           <Image 
             src="/CarrotWarningLogo.png"
             layout="responsive"
-            width={'100vw'}
-            height={'100vw'}
+            width={'100%'}
+            height={'90%'}
           />
         </div>
         <p>
@@ -75,6 +75,7 @@ const StyledIndexTopStrip = styled(Box)`
       font-size: 20px;
       line-height: 28px;
       letter-spacing: 0px;
+      padding: 0 24px;
     }
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.xs}) {

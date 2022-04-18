@@ -4,8 +4,9 @@ import Box from "./../Box/Box";
 import Leaders from "./../../data/twitter_leaders.json";
 
 const IndexTwitterGrid = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(true);
     fetch("http://dxdaobot.pythonanywhere.com/")
@@ -19,6 +20,7 @@ const IndexTwitterGrid = () => {
         setLoading(false);
       });
   }, []);
+
   return (
     <StyledTwitterGrid size="full">
       <ul>
@@ -46,37 +48,44 @@ const IndexTwitterGrid = () => {
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
               </Spinner>
-            ) : data.find((account) => account.id === id)?.follows ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#2c3e50"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <polyline points="9 11 12 14 20 6" />
-                <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
-              </svg>
+            ) : data ? (
+              data.find((account) => account.id === id)?.follows ? (
+                // Is following check-mark
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <polyline points="9 11 12 14 20 6" />
+                  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
+                </svg>
+              ) : (
+                // Not following
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                </svg>
+              )
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#2c3e50"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-              </svg>
+              // No data returned
+              <div />
             )}
           </li>
         ))}

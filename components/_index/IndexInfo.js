@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components"
+import styled, { keyframes } from "styled-components";
 import Image from "next/image";
 import Box from "../Box/Box";
-import IndexTwitterGrid from './IndexTwitterGrid'
+import IndexTwitterGrid from "./IndexTwitterGrid";
 import Motion from "../Motion/Motion";
 
 const IllustratedList = [
@@ -50,9 +50,9 @@ const IndexInfo = () => {
                 </a>
               </li>
               <li>
-                As a participant, anything that you can do during the week to help
-                achieve the goal will benefit all campaign carrot token holders
-                together.
+                As a participant, anything that you can do during the week to
+                help achieve the goal will benefit all campaign carrot token
+                holders together.
               </li>
             </ul>
           </section>
@@ -60,11 +60,11 @@ const IndexInfo = () => {
         <Motion>
           <div className="arrow-strip">
             {[...Array(5)].map((e, i) => (
-              <div 
+              <div
                 key={i}
                 className="green-arrow"
                 style={{ animationDelay: (0 + i) * 100 + "ms" }}
-                >
+              >
                 <Image
                   src="/DownArrowGreen.svg"
                   layout="responsive"
@@ -82,10 +82,10 @@ const IndexInfo = () => {
               {IllustratedList.map((listItem, i) => (
                 <li key={i}>
                   <div className="graphic">
-                    <Image 
-                      src={`/IllustrationList/${i + 1}.svg`} 
-                      width={'100vw'}
-                      height={'100vw'}
+                    <Image
+                      src={`/IllustrationList/${i + 1}.svg`}
+                      width={"100vw"}
+                      height={"100vw"}
                       layout="responsive"
                     />
                   </div>
@@ -101,10 +101,11 @@ const IndexInfo = () => {
         <Motion>
           <section className="campaign-details">
             <div className="detail-block">
-              <h2>Total Potential<br/> Campaign Payout</h2>
-              <p>
-                Up to 50,000 wxDai
-              </p>
+              <h2>
+                Total Potential
+                <br /> Campaign Payout
+              </h2>
+              <p>Up to 50,000 wxDai</p>
             </div>
             <div className="detail-block">
               <h2>Carrot token objective</h2>
@@ -125,13 +126,23 @@ const IndexInfo = () => {
           <div className="detail-block">
             <h2>Details</h2>
             <p>
-              This campaign will pay out in the range of 1 to 50 follows, with no payout when the result is below 1 follow and increasing linear payout over the range with a full collateral payout when the result is 50 follows.
+              This campaign will pay out in the range of 1 to 50 follows, with
+              no payout when the result is below 1 follow and increasing linear
+              payout over the range with a full collateral payout when the
+              result is 50 follows.
             </p>
           </div>
           <div className="detail-block">
             <h2>Don’t have Carrot tokens and want to buy some?</h2>
             <p>
-            Check out the Carrot token -&gt; wXDAI pool on Swapr.eth.limo: <br/>xDXDAOTWIT50-0425 -&gt; wxDAI pool
+              Check out the{" "}
+              <a
+                href="https://swapr.eth.link/#/pools/0xDF1364e289d9c4A60Bd5F4f731811B77D2F0D1c8/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d?chainId=100"
+                target="_blank"
+                rel="noreferrer"
+              >
+                xDXDAOTWIT50-0425 -> wxDAI pool on Swapr.eth.limo
+              </a>
             </p>
           </div>
         </Box>
@@ -220,7 +231,7 @@ const StyledIndexInfo = styled(Box)`
         height: 311px;
         .graphic {
           min-width: 240px;
-          min-height: 240px
+          min-height: 240px;
         }
         .content {
           padding: 0 0 0 40px;
@@ -306,7 +317,7 @@ const StyledIndexInfo = styled(Box)`
   .lower-details {
     max-width: 680px;
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.l}) {
     .primary-list {
       padding-left: 60px;
       width: unset;
@@ -384,7 +395,7 @@ const StyledIndexInfo = styled(Box)`
       }
     }
   }
-  @media screen and (max-width: ${props => props.theme.breakpoints.s}) {
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.s}) {
     .illustrated-list {
       padding: 0;
       max-width: unset;

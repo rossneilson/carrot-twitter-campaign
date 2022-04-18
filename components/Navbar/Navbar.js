@@ -110,6 +110,9 @@ const StyledNavbar = styled(Box)`
 		.navbar-inner-container {
 			.logo {
 				width: 140px;
+				height: 35px;
+				position: relative;
+				left: -12px;
 			}
 			.navbar-links {
 				display: none;

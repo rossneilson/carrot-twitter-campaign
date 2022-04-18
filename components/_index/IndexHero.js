@@ -48,7 +48,7 @@ const StyledIndexHero = styled.section`
     h1 {
       font-size: 40px;
       line-height: 44px;
-      margin-top: 40px;
+      margin-top: 32px;
       margin-bottom: 16px;
       br {
         display: none;

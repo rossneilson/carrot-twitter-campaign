@@ -141,7 +141,7 @@ const IndexInfo = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                xDXDAOTWIT50-0425 -> wxDAI pool on Swapr.eth.limo
+                xDXDAOTWIT50-0425 -&gt; wxDAI pool on Swapr.eth.limo
               </a>
             </p>
           </div>

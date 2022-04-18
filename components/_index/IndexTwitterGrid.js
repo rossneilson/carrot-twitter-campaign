@@ -9,7 +9,7 @@ const IndexTwitterGrid = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://dxdaobot.pythonanywhere.com/")
+    fetch("https://dxdaobot.pythonanywhere.com/")
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);

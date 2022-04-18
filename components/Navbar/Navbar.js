@@ -31,9 +31,9 @@ const Navbar = () => {
 					<div className="logo">
 						<Image 
 							layout="responsive"
-							src="/CarrotLogo.svg"
-							width={'100vw'}
-							height={'100vw'}
+							src="/CarrotLogo.png"
+							width={'100%'}
+							height={'26%'}
 						/>
 					</div>
 					<section className="navbar-links">
@@ -69,6 +69,7 @@ const StyledNavbar = styled(Box)`
 		justify-content: space-between;
 		.logo {
 			width: 188px;
+			height: 54px;
 		}
 		.navbar-links {
 			display: flex;

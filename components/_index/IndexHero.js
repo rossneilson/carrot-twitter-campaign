@@ -7,9 +7,9 @@ const IndexHero = () => {
     <StyledIndexHero>
       <Box size="large" flexDirection="column" dataAos={'fade-up'}>
         <Motion initialPositionY={100}>
-          <h1>DXdao Twitter<br/> Awareness Activation<br/> Using <bold>Carrot.eth</bold> </h1>
+          <h1>DXdao Twitter Awareness <br className="show-large"/>Activation Using <bold>Carrot.eth</bold> </h1>
           <p>
-            During ETH Week<br className="show-mobile"/> in Amsterdam
+            During ETH Week<br className="show-small"/> in Amsterdam
           </p>
           <p>
             April 18-25, 2022
@@ -36,19 +36,23 @@ const StyledIndexHero = styled.section`
     text-transform: uppercase;
     font-weight: 400;
   }
-  .show-mobile {
+  .show-small,
+  .show-large {
     display: none;
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
-    .show-mobile {
+    padding-bottom: 80px;
+    .show-large {
       display: block;
     }
-    padding-bottom: 80px;
     h1 {
       font-size: 40px;
       line-height: 44px;
       margin-top: 40px;
       margin-bottom: 16px;
+      br {
+        display: none;
+      }
     }
     p {
       font-size: 12px;
@@ -56,6 +60,10 @@ const StyledIndexHero = styled.section`
       letter-spacing: 6px;
     }
   }
+  @media screen and (max-width: ${props => props.theme.breakpoints.s}) {
+    .show-small {
+      display: block;
+    }
 `;
 
 export default IndexHero;

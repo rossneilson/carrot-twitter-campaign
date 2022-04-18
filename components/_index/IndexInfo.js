@@ -303,6 +303,9 @@ const StyledIndexInfo = styled(Box)`
       }
     }
   }
+  .lower-details {
+    max-width: 680px;
+  }
   @media screen and (max-width: ${props => props.theme.breakpoints.l}) {
     .primary-list {
       padding-left: 60px;

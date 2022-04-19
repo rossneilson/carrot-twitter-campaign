@@ -137,7 +137,7 @@ const IndexInfo = () => {
             <p>
               Check out the{" "}
               <a
-                href="https://swapr.eth.link/#/pools/0xDF1364e289d9c4A60Bd5F4f731811B77D2F0D1c8/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d?chainId=100"
+                href="https://swapr.eth.limo/#/swap?outputCurrency=0xDF1364e289d9c4A60Bd5F4f731811B77D2F0D1c8&inputCurrency=0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97dchainId%3D100&chainId=100"
                 target="_blank"
                 rel="noreferrer"
               >
